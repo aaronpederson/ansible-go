@@ -1,4 +1,7 @@
 ---
-- apt:
-    pkg: golang-go
+- name: Install Packages | apt
+  apt:
+    name: "{{ item }}"
     state: latest
+  with_items:
+    - golang-go
