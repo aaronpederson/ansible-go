@@ -1,6 +1,6 @@
 ---
 - name: Add Go Repository | apt
-  apt_repostiroy:
+  apt_repository:
     repo: 'ppa:ubuntu-lxc/lxd-stable'
 
 - name: Install Packages | apt
