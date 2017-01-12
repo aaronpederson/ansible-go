@@ -1,7 +1,10 @@
 ---
+- name: Add Go Repository | apt
+  apt_repostiroy:
+    repo: 'ppa:ubuntu-lxc/lxd-stable'
+
 - name: Install Packages | apt
   apt:
-    name: "{{ item }}"
+    name: golang
     state: latest
-  with_items:
-    - golang-go
+    update_cache: yes
